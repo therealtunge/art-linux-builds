@@ -6,6 +6,12 @@ jobs:
   build-art-host:
     runs-on: ubuntu-22.04
     steps:
+    - name: Clean unused stuff
+    run: |
+      rm -rf ~/.cache
+      rm -rf aosp/.repo
+      sudo apt clean
+
     - name: deps
       run: |
         sudo apt update
