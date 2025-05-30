@@ -28,7 +28,7 @@ jobs:
     - name: get AOSP
       run: |
         mkdir aosp && cd aosp
-        repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r3
+        repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r3 --depth=1
         repo sync -c -j4
 
     - name: build ART
