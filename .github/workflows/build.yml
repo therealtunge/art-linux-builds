@@ -33,7 +33,7 @@ jobs:
         m -j$(nproc) art
 
     - name: upload binaries
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: art-host-bin
         path: aosp/out/host/linux-x86/bin/
