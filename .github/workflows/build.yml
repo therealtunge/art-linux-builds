@@ -34,7 +34,10 @@ jobs:
 
       - name: get AOSP
         run: |
+          mkdir aosp
           cd aosp
+          repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r3
+          repo sync -c -j4
           source build/envsetup.sh
           lunch aosp_x86_64-eng
           m -j$(nproc) art
