@@ -39,7 +39,7 @@ jobs:
           lunch aosp_x86_64-eng
           m -j$(nproc) art
       - name: upload bins
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.3
         with:
           name: art-host-bin
           path: aosp/out/host/linux-x86/bin/
