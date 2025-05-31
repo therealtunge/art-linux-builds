@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="aosp" fetch="https://android.googlesource.com/" />
+  <default revision="android-14.0.0_r3" remote="aosp" sync-j="4" />
+
+  <project path="art" name="platform/art" />
+  <project path="bionic" name="platform/bionic" />
+  <project path="build" name="platform/build" />
+  <project path="system/core" name="platform/system/core" />
+  <project path="libnativehelper" name="platform/libnativehelper" />
+  <project path="frameworks/native" name="platform/frameworks/native" />
+  <project path="external/libcxx" name="platform/external/libcxx" />
+  <project path="external/libcxxabi" name="platform/external/libcxxabi" />
+  <project path="external/zlib" name="platform/external/zlib" />
+  <project path="external/icu" name="platform/external/icu" />
+</manifest>
