@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="platform/art" path="art" />
+  <project name="platform/bionic" path="bionic" />
+  <project name="platform/build" path="build" />
+  <project name="platform/system/core" path="system/core" />
+  <project name="platform/libnativehelper" path="libnativehelper" />
+  <project name="platform/frameworks/native" path="frameworks/native" />
+  <project name="platform/external/libcxx" path="external/libcxx" />
+  <project name="platform/external/libcxxabi" path="external/libcxxabi" />
+  <project name="platform/external/zlib" path="external/zlib" />
+  <project name="platform/external/icu" path="external/icu" />
+</manifest>
