@@ -29,14 +29,19 @@ jobs:
       run: |
         mkdir aosp && cd aosp
         repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r3 --depth=1
-        repo sync -c -j4
+        mkdir -p .repo/local_manifests
+        cp art_minimal.xml .repo/local_manifests/
+        repo sync -c --no-tags --no-clone-bundle -j4
+
 
     - name: build ART
       run: |
         cd aosp
         source build/envsetup.sh
-        lunch aosp_x86_64-eng
-        m -j$(nproc) art
+        lunch aosp_arm64-eng
+        m -j$(nproc) dalvikvm
+        sudo rm -rf /usr/share/dotnet /opt/ghc ~/.cargo ~/.npm ~/.rustup || true
+        df -h
 
     - name: upload binaries
       uses: actions/upload-artifact@v4
