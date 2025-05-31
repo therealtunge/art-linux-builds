@@ -30,7 +30,7 @@ jobs:
         mkdir aosp && cd aosp
         repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r3 --depth=1
         mkdir -p .repo/local_manifests
-        cp art_minimal.xml .repo/local_manifests/
+        cp $GITHUB_WORKSPACE/art_minimal.xml .repo/local_manifests/
         repo sync -c --no-tags --no-clone-bundle -j4
 
 
